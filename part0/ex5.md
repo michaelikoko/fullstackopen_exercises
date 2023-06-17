@@ -19,7 +19,7 @@ sequenceDiagram
     server-->>browser: script (JavaScript file)
     deactivate server
 
-    Note over browser: The Script file(spa.js) makes an XMLHttp get request
+    Note over browser: The browser executes the JavaScript code in spa.js that fetches JSON data from the server.<br>This makes an XMLHttp Get request
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
@@ -28,5 +28,5 @@ sequenceDiagram
     Note right of browser: Response: [{ "content": "great", "date": "2023-06-16T21:47:49.797Z" }, ...]
     deactivate server
 
-    Note over browser: The Script file(spa.js) renders the data gotten from the server on the HTML page
+    Note over browser: The browser executes the callback function in spa.js that renders the notes
 ```

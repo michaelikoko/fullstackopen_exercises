@@ -23,8 +23,10 @@ sequenceDiagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{ "content": "great", "date": "2023-06-16T21:47:49.797Z" }, ... ]
+    server-->>browser: xhr
+    Note right of browser: Status: 200 OK
+    Note right of browser: Response: [{ "content": "great", "date": "2023-06-16T21:47:49.797Z" }, ...]
     deactivate server
 
-    Note right of browser: The Script file(spa.js) renders the data gotten from the server on the HTML page
+    Note over browser: The Script file(spa.js) renders the data gotten from the server on the HTML page
 ```

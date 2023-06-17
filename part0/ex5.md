@@ -19,7 +19,8 @@ sequenceDiagram
     server-->>browser: script (JavaScript file)
     deactivate server
 
-    Note over browser: The browser executes the JavaScript code in spa.js that fetches JSON data from the server.<br>This makes an XMLHttp Get request
+    Note over browser:  The browser executes the JavaScript code that fetches the JSON data from the server.
+    Note over browser: This Script file (spa.js) makes an XMLHttp Get request
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server

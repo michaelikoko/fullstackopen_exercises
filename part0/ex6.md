@@ -15,7 +15,8 @@ sequenceDiagram
     Note right of browser: Status: 201 Created
     Note right of browser: Response: {"message": "note created"}
 
-    Note over browser: The Script file (spa.js) makes an XMLHttp GET request
+    Note over browser:  The browser executes the JavaScript code that fetches the JSON data from the server.
+    Note over browser: This Script file (spa.js) makes an XMLHttp Get request
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server

@@ -65,7 +65,6 @@ export default function App() {
 						setNewNum('')
 					})
 					.catch(error => {
-						console.log("hey")
 						setIsError(true)
 						setAlertMessage(
 							`Information of ${updatePerson.name} has already been removed from the server`
@@ -95,13 +94,11 @@ export default function App() {
 	}
 
 	function deletePerson(id) {
-		console.log(id)
 		const confirmPerson = persons.find(person => person.id === id)
 		if (window.confirm(`Delete ${confirmPerson.name} ?`)) {
 			phoneService
 				.deleteObj(id)
 				.then(response => {
-					console.log(response)
 					setPersons(persons.filter(person => person.id !== id))
 				})
 		}
